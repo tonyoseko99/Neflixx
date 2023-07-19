@@ -35,10 +35,10 @@ export default function Logo() {
     <>
       <Link href="/" style={{ display: showButton ? "none" : "block" }}>
         <Image
-          src="../public/studio.png"
+          src="/../public/studio.png"
           alt="logo"
-          width={width < 1024 ? 150 : 250}
-          height={width < 1024 ? 45 : 74}
+          width={width < 1024 ? 120 : 150}
+          height={width < 1024 ? 120 : 150}
           className="relative"
         />
         <div style={{ display: showButton ? "block" : "none" }}>
