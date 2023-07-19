@@ -6,6 +6,20 @@ import Button from "./button";
 
 export default function Logo() {
   const [width, setWidth] = useState(0);
+  const [showButton, setShowButton] = useState(false);
+
+  //   change nav button on resize
+  const changeNavButton = () => {
+    if (window.scrollY >= 400 && window.innerWidth < 760) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavButton);
+  }, []);
 
   //   update width of the logo
   const updateWidth = () => {
@@ -17,5 +31,20 @@ export default function Logo() {
     window.addEventListener("resize", updateWidth);
     updateWidth();
   }, []);
-  return <div>Logo</div>;
+  return (
+    <>
+      <Link href="/" style={{ display: showButton ? "none" : "block" }}>
+        <Image
+          src="../public/studio.png"
+          alt="logo"
+          width={width < 1024 ? 150 : 250}
+          height={width < 1024 ? 45 : 74}
+          className="relative"
+        />
+        <div style={{ display: showButton ? "block" : "none" }}>
+          <Button />
+        </div>
+      </Link>
+    </>
+  );
 }

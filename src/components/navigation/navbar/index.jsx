@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import Logo from "./logo";
+import Button from "./button";
 
 function Navbar() {
   return (
