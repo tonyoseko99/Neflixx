@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { getPopularMovies } from "@/api/routes";
 import MovieList from "@/components/movieList";
@@ -13,6 +12,7 @@ export default function Home() {
       .then((data) => {
         setMovies(data);
         console.log(data);
+        
       })
       .catch((error) => {
         console.log(`Error: ${error}`);

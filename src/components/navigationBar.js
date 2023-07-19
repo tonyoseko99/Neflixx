@@ -63,45 +63,43 @@ function Navbar() {
 
         {/* Expanded mobile menu */}
         {isMenuOpen && (
-          <div className="fixed inset-0 z-50 bg-gray-800">
-            <div className="container mx-auto flex flex-col justify-center items-center h-screen">
-              <button
-                className="text-white text-xl absolute top-4 right-4 focus:outline-none"
-                onClick={toggleMenu}
+          <div className="fixed inset-0 bg-gray-800 z-50 flex flex-col justify-center items-center">
+            <button
+              className="text-white text-xl absolute top-4 right-4 focus:outline-none"
+              onClick={toggleMenu}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-              <ul className="text-center text-white space-y-4">
-                <li>
-                  <a href="/" className="hover:text-gray-400">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="/about" className="hover:text-gray-400">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="/contact" className="hover:text-gray-400">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <ul className="text-center text-white space-y-4">
+              <li>
+                <a href="/" className="hover:text-gray-400">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="hover:text-gray-400">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-gray-400">
+                  Contact
+                </a>
+              </li>
+            </ul>
           </div>
         )}
       </div>
